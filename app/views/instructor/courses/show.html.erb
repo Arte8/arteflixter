@@ -59,7 +59,7 @@
          
           <br class="clr" />
           <br class="clr" /> 
-          
+
           <ul class="lessons">
             <% section.lessons.rank(:row_order).each do |lesson| %>
               <li data-update-url="<%= instructor_lesson_path(lesson) %>">
@@ -133,7 +133,7 @@ Add a new section...
 </div>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+<button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal">
   New Lesson...
 </button>
  -->
@@ -147,7 +147,7 @@ Add a new section...
         </button>
         <h4 class="modal-title" id="newLessonModalLabel">Add a new lesson</h4>
       </div>
-<%= simple_form_for @lesson, url: "#", html: {id: 'newLessonForm' } do |f| %>
+<%= simple_form_for @lesson, url: "instructor_lesson_path", html: {id: 'newLessonForm' } do |f| %>
       <div class="modal-body">
         <%= f.input :title %>
         <%= f.input :subtitle %>
