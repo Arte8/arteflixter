@@ -53,13 +53,12 @@
           <%= section.title %>
         </div>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newLessonModal">
-          New Lesson...
-        </button>
+  <button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+    New Lesson...
+          </button>
          
           <br class="clr" />
           <br class="clr" /> 
-
           <ul class="lessons">
             <% section.lessons.rank(:row_order).each do |lesson| %>
               <li data-update-url="<%= instructor_lesson_path(lesson) %>">
@@ -132,11 +131,9 @@ Add a new section...
   </div>
 </div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal">
-  New Lesson...
-</button>
- -->
+  
+
+
 <!-- Modal -->
 <div class="modal fade" id="newLessonModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -147,7 +144,7 @@ Add a new section...
         </button>
         <h4 class="modal-title" id="newLessonModalLabel">Add a new lesson</h4>
       </div>
-<%= simple_form_for @lesson, url: "instructor_lesson_path", html: {id: 'newLessonForm' } do |f| %>
+  <%= simple_form_for @lesson, url: "#", html: {id: 'newLessonForm' } do |f| %>
       <div class="modal-body">
         <%= f.input :title %>
         <%= f.input :subtitle %>
