@@ -1,24 +1,15 @@
-# README
+# **ARTEFLIXTER**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Coded in: Ruby on Rails, Javascript, JQuery
 
-Things you may want to cover:
+Visit the app at: https://flixter-arts.herokuapp.com/
 
-* Ruby version
+## **FEATURES**
 
-* System dependencies
+* Stripe allows a secure payment process for students purchasing lesson subscription.
+* Amazon Web Services (S3) stores media of photos and videos.
+* Organization and sorting of lessons, are quick and easy.
+* Security is authenticated with Devise for sign in and access for teacher and student access.
+* Student and teacher roles are open and switching between them are possible and open with intrinsic rights preserved.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+check it out, each one teach one. 
